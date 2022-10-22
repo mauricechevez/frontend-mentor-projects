@@ -101,6 +101,8 @@ body{
   background-color: red;
 } */
 
+
+
 .notification-wrapper .message .user-name{
   font-weight: bold;
   color: var(--very-blue);
@@ -118,6 +120,13 @@ body{
 
 .notification-wrapper .message .group{
   color: var(--blue);
+}
+
+.notification-wrapper .message .unread-indicator{
+  border: 1px solid;
+  height: 8px;
+  width: 8px;
+  display: inline-block;
 }
 
 .notification-wrapper .private-message{

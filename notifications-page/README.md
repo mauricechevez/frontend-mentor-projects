@@ -2,6 +2,8 @@
 
 ## My Notes ##
 * Need to fix the unread notification dots. Most likely will need to make them into spans so they go in line with the message. I already have a template for them in CSS, just need to change the elements.
+* Need to work on mobile view
+* Review the design jpg again to see if the bold characters are links(are they clickable?)
 
 
 ![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)
