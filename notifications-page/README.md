@@ -1,5 +1,9 @@
 # Frontend Mentor - Notifications page
 
+## My Notes ##
+* Need to fix the unread notification dots. Most likely will need to make them into spans so they go in line with the message. I already have a template for them in CSS, just need to change the elements.
+
+
 ![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

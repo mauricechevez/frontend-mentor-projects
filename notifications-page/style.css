@@ -90,7 +90,7 @@ body{
   position: relative;
 }
 
-.notification-wrapper.unread .message::after{
+/* .notification-wrapper.unread .message::after{
   content: "";
   position: absolute;
   height: 8px;
@@ -99,7 +99,7 @@ body{
   right:-15px;
   border-radius: 50%;
   background-color: red;
-}
+} */
 
 .notification-wrapper .message .user-name{
   font-weight: bold;
