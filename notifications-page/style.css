@@ -1,0 +1,134 @@
+:root{
+    --very-blue:hsl(224, 21%, 14%);
+    --greyish-blue: hsl(219, 12%, 42%);
+    --white:hsl(0,0%,100%);
+    --blue:hsl(219, 85%, 26%);
+    --dark-greyish-blue:hsl(219, 12%, 42%);
+    --very-light-grayish-blue:hsl(210, 60%, 98%);
+    
+}
+
+body{
+  background-color: var(--very-light-grayish-blue);
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.3;
+}
+
+.container{
+  background-color: var(--white);
+  border-radius: 10px;
+  max-width: 730px;
+  width: 100%;
+  margin: 5rem auto;
+  padding:30px;
+}
+
+.heading-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.heading-wrapper{
+  display: flex;
+}
+
+.heading-wrapper #heading-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.heading-wrapper #unread-amount{
+  display: block;
+  background-color: var(--blue);
+  color: #fff;
+  padding: 1px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+#mark-all-read{
+  cursor: pointer;
+  user-select: none;
+}
+#mark-all-read:hover{
+  text-decoration: underline;
+}
+
+.notification-wrapper{
+  display: flex;
+  padding:16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.notification-wrapper .picture{
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.notification-wrapper .picture img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.notification-wrapper.unread{
+  background-color: var(--very-light-grayish-blue);
+}
+
+.notification-wrapper .message-wrapper{
+  width: 100%;
+}
+
+.notification-wrapper .message{
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.notification-wrapper.unread .message::after{
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  top: 4px;
+  right:-15px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.notification-wrapper .message .user-name{
+  font-weight: bold;
+  color: var(--very-blue);
+  margin-right: 5px;
+}
+
+.notification-wrapper .message .subject, .notification-wrapper .message .group{
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.notification-wrapper .message .subject{
+  color: var(--dark-greyish-blue);
+}
+
+.notification-wrapper .message .group{
+  color: var(--blue);
+}
+
+.notification-wrapper .private-message{
+  padding:16px;
+  border:2px solid var(--very-light-grayish-blue);
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.notification-wrapper .user-content img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
