@@ -123,11 +123,19 @@ body{
 }
 
 .notification-wrapper .message .unread-indicator{
-  border: 1px solid;
-  height: 8px;
-  width: 8px;
+  height:100%;
   display: inline-block;
+  position: relative;
+  margin: 0 0 1px 5px;
 }
+.notification-wrapper .message .unread-indicator .unread-dot{
+  height: 8px;
+  width:8px;
+  background-color: red;
+  display: block;
+  border-radius: 50%;
+}
+
 
 .notification-wrapper .private-message{
   padding:16px;
