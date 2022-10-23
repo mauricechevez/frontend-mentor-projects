@@ -12,8 +12,8 @@ function markRead(){
     msg.classList.remove('unread')
     // Remove number from page
     unreadAmount.style.display = 'none'
-    document.querySelectorAll('.unread-indicator').forEach(indicator =>{
-      indicator.style.display = 'none'
-    })
+  })
+  document.querySelectorAll('.unread-indicator').forEach(indicator =>{
+    indicator.style.display = 'none'
   })
 }
