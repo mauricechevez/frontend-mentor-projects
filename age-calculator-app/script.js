@@ -10,13 +10,30 @@ const yearsOutput = document.querySelector('#years-total span')
         monthsOutput = document.querySelector('#months-total span')
         daysOutput = document.querySelector('#days-total span');
 
+// error messages
+const errMsgs = {
+    required:'This field is required',
+    invalidDay: 'Please input a valid day',
+    invalidMonth: 'Please input a valid month',
+    invalidYear: 'Please input a valid year'
+}
+
 
 // event listener
 form.addEventListener('submit',e =>{
-    e.preventDefault();
-    const age = calcAge(dayInput.value,monthInput.value,yearInput.value);
-    writeAge(age)
-})
+    
+    if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation()
+      } else if(form.checkValidity()){
+        e.preventDefault();
+        const age = calcAge(dayInput.value,monthInput.value,yearInput.value);
+        writeAge(age)
+      }
+    
+    form.classList.add('was-validated')
+
+}, false)
 
 /* Functions */
 
