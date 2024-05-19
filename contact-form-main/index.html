@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form id="form" class="form">
+      <h1>Contact Us</h1>
+      <div class="container">
+        <div class="container inline-container">
+          <div class="input-container">
+            <label for="first-name" class="form-label">First Name</label>
+            <input type="text" name="first-name" id="first-name" />
+            <span class="hint-text">This field is required</span>
+          </div>
+          <div class="input-container">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input type="text" name="last-name" id="last-name" />
+            <span class="hint-text">This field is required</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="input-container single-item">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="text" name="email" id="email" class="full-width" />
+          <span class="hint-text">Please enter a valid email address</span>
+        </div>
+      </div>
+      <div class="container">
+        <label class="form-label" style="display: block">Query Type</label>
+        <div class="container inline-container">
+          <div class="input-container inline-radio">
+            <label for="query-1">
+              <input type="radio" name="query" id="query-1" value="General Enquiry" />
+              <span>General Enquiry</span>
+            </label>
+          </div>
+          <div class="input-container inline-radio">
+            <label for="query-2">
+              <input type="radio" name="query" id="query-2" value="Support Request" />
+              <span>Support Request</span>
+            </label>
+          </div>
+        </div>
+        <span class="hint-text">Please select a query type</span>
+      </div>
+      <div class="container">
+        <div class="input-container single-item">
+          <label for="message" class="form-label">Message</label>
+          <textarea name="message" id="message" placeholder="Your message here..."></textarea>
+          <span class="hint-text">This field is required</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="input-container">
+          <label for="consent-check" id="consent-label">
+            <input type="checkbox" name="consent" id="consent-check"/>
+            <span>I consent to being contacted by the team.</span>
+          </label>
+        </div>
+        <span class="hint-text">To submit this form, please consent to being contacted.</span>
+      </div>
+
+      
+      
+      
+      Submit
+    </form>
+
+    Message Sent! Thanks for completing the form. We'll be in touch soon!
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>
+      . Coded by
+      <a href="#">Your Name Here</a>
+      .
+    </div>
+  </body>
+</html>

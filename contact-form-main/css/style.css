@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Karla;
+    src: url('../assets/fonts/Karla-VariableFont_wght.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 300 800;
+  }
+
+  :root{
+    --form-width:740px;
+    --input-radius:10px;
+    --input-padding:15px 25px;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(143.33deg 40.91% 91.37%);
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    padding:40px;
+    height: 100%;
+}
+
+.form{
+    max-width:var(--form-width);
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding:40px;
+    margin: 0 auto;
+}
+
+h1{
+    margin-bottom: 40px;
+}
+
+.container{
+    margin-bottom: 40px;
+}
+
+.input-container:first-of-type{
+    margin-right: 15px;
+}
+
+.input-container.single-item{
+    margin-right: 0px !important;
+}
+
+.inline-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--form-width);
+}
+
+.inline-radio{
+    display: flex;
+    flex-direction: row;
+    border:1px solid green;
+    border-radius: var(--input-radius);
+    padding:var(--input-padding);
+    width:100%;
+}
+
+.inline-radio:first-of-type{
+    margin-right: 15px;
+}
+
+.inline-radio input{
+    display: inline-block;
+    margin-right:10px
+}
+
+
+.form-label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form-label::after{
+    content: ' *';
+    padding-left: 5px;
+    color:green;
+}
+
+[type="checkbox"], [type="radio"] {
+    transform: scale(1.4);
+    accent-color: green;
+}
+
+input[type="text"]{
+    height:50px;
+    padding:var(--input-padding);
+    max-width: 320px;
+    width: 100%;
+    border-radius: var(--input-radius);
+    border:1px solid green;
+    /* display: inline-block; */
+    margin-bottom: 15px;
+}
+
+textarea{
+    padding:var(--input-padding);
+    border-radius: var(--input-radius);
+    border:1px solid green;
+}
+
+
+input.full-width,textarea{
+    width: 100% !important;
+    max-width: none;
+}
+
+textarea{
+    height: 100px;
+}
+
