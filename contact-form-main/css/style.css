@@ -9,6 +9,11 @@
     --form-width:740px;
     --input-radius:10px;
     --input-padding:15px 25px;
+    --green:hsl(169, 82%, 27%);
+    --dark-green:hsl(170.53deg 82.61% 13.53%);
+    --medium-grey:hsl(186, 15%, 59%);
+    --dark-grey:hsl(187, 24%, 22%);
+    --red:hsl(0, 66%, 56%);
   }
 
 body{
@@ -33,10 +38,15 @@ body{
 
 h1{
     margin-bottom: 40px;
+    color:var(--dark-grey);
 }
 
 .container{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.input-container{
+    width:100%;
 }
 
 .input-container:first-of-type{
@@ -50,7 +60,7 @@ h1{
 .inline-container{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     max-width: var(--form-width);
 }
@@ -58,10 +68,14 @@ h1{
 .inline-radio{
     display: flex;
     flex-direction: row;
-    border:1px solid green;
+    border:1px solid var(--medium-grey);
     border-radius: var(--input-radius);
     padding:var(--input-padding);
     width:100%;
+}
+
+.inline-check input{
+    margin-right: 10px;
 }
 
 .inline-radio:first-of-type{
@@ -75,7 +89,7 @@ h1{
 
 
 .form-label{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 12px;
     display: block;
@@ -92,14 +106,17 @@ h1{
     accent-color: green;
 }
 
+[type="radio"]:checked {
+    
+}
+
 input[type="text"]{
     height:50px;
     padding:var(--input-padding);
     max-width: 320px;
     width: 100%;
     border-radius: var(--input-radius);
-    border:1px solid green;
-    /* display: inline-block; */
+    border:1px solid var(--medium-grey);
     margin-bottom: 15px;
 }
 
@@ -107,6 +124,8 @@ textarea{
     padding:var(--input-padding);
     border-radius: var(--input-radius);
     border:1px solid green;
+    margin-bottom: 15px;
+    height:100px;
 }
 
 
@@ -115,7 +134,91 @@ input.full-width,textarea{
     max-width: none;
 }
 
-textarea{
-    height: 100px;
+input[type="text"]:hover,textarea:hover{
+    border-color: var(--green);
 }
 
+input[type="text"]:focus,input[type="text"]:active, textarea:focus {
+    border-color: var(--green);
+    border-width: 2px;
+    outline: 0;
+}
+
+.error-text{
+    display: none;
+    color: var(--red);
+}
+
+.error-text.show{
+    display:block;
+}
+
+form input[type="submit"]{
+    background-color: var(--green);
+    color:white;
+    padding:var(--input-padding);
+    border-radius: var(--input-radius);
+    border: 0;
+    width:100%;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--dark-green);
+}
+
+/* Notification */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: left;
+    border-radius: 10px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 30px; /* 30px from the top*/
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #snackbar p{
+    display:flex;
+  }
+
+  #snackbar img{
+    margin-right:5px;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
